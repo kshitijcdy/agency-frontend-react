@@ -1,0 +1,30 @@
+.navbar {
+    height: 100px;
+    // background-color: green;
+
+    .wrapper {
+        max-width: 1366px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        // background-color: red;
+
+
+        span {
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .social {
+            display: flex;
+            gap: 20px;
+            // background-color: red;
+
+            img {
+                width:40px;
+            }
+        }
+    }
+}
