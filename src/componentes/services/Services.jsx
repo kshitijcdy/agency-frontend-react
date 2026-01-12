@@ -82,7 +82,7 @@ function Services() {
             your market deeply and defining a clear direction that supports
             long-term growth and differentiation.
           </p>
-          <motion.button whileTap={{ background:"darkgray", color:"black"}}>
+          <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE
           </motion.button>
         </motion.div>
@@ -96,7 +96,7 @@ function Services() {
             together seamlessly, giving your brand a consistent, professional
             look that people remember.
           </p>
-          <motion.button whileTap={{ background:"darkgray", color:"black"}}>
+          <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE
           </motion.button>
         </motion.div>
@@ -110,7 +110,7 @@ function Services() {
             offer, and why it matters, helping your brand connect naturally with
             the right audience.
           </p>
-          <motion.button whileTap={{ background:"darkgray", color:"black"}}>
+          <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE
           </motion.button>
         </motion.div>
@@ -124,7 +124,7 @@ function Services() {
             digital channels, ensuring a unified experience that builds trust
             and strengthens recognition.
           </p>
-          <motion.button whileTap={{ background:"darkgray", color:"black"}}>
+          <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE
           </motion.button>
         </motion.div>
