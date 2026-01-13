@@ -34,7 +34,7 @@ const sliderVariants = {
     transition: {
       repeat: Infinity,
       ease: "linear",
-      duration: 20,
+      duration: 50,
     },
   },
 };

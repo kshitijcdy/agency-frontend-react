@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .services {
     background: linear-gradient(180deg, #0c0c1d, #111132);
     height: 100%;
@@ -13,18 +15,38 @@
         align-items: center;
         gap: 20px;
 
+        @include mobile {
+            align-self: right;
+            text-align: center;
+            flex-direction: column;
+            padding-top:  45px;
+            // background-color: red;
+        }
+
         p {
             font-weight: 200;
             font-size: 20px;
             color: rgb(208, 205, 205);
             text-align: right;
+
+            @include mobile {
+                font-size: 17px;
+                // background-color: green;
+            }
         }
 
         hr {
             width: 500px;
             border: none;
             border-top: 0.5px solid rgb(208, 205, 205);
-            ;
+
+            @include mobile {
+                width: 270px;
+                
+                
+
+
+            }
         }
     }
 
@@ -34,11 +56,23 @@
         flex-direction: column;
         align-items: center;
 
+        @include mobile {
+            width: 100%;
+
+        }
+
         .title {
 
             display: flex;
             gap: 50px;
             align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+
+            }
 
 
             img {
@@ -46,11 +80,22 @@
                 height: 100px;
                 border-radius: 50px;
                 object-fit: cover;
+
+                @include mobile {
+                    width: 200px;
+                    height: 80px;
+                }
             }
 
             h1 {
                 font-size: 96px;
                 font-weight: 100;
+
+                @include mobile {
+                    font-size: 45px;
+
+                }
+
 
                 b {
                     font-weight: 600;
@@ -66,6 +111,12 @@
                 font-size: 24px;
                 font-weight: 600;
                 cursor: pointer;
+
+                @include mobile {
+                    width: 200px;
+                    font-size: 16px;
+                    height: 60px;
+                }
             }
         }
     }
@@ -77,12 +128,27 @@
         max-width: 1366px;
         margin: auto;
 
+        @include mobile {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            // background-color: green;
+
+        }
+
         .box {
-            padding: 20px 30px ;
-          
+            padding: 20px 30px;
             margin: 15px;
             border: 0.5px solid rgb(208, 205, 205);
             border-radius: 20px;
+
+            @include mobile {
+                padding: 10px;
+                margin: 10px;
+                width: 43%;
+
+
+            }
 
             h2 {
                 font-size: 30px;
@@ -91,12 +157,20 @@
                 margin-top: 10px;
                 margin: auto;
                 margin-bottom: 5px;
+
+                @include mobile {
+                    font-size: 20px;
+                }
             }
 
 
             p {
                 font-size: 18px;
                 line-height: 25px;
+
+                @include mobile {
+                    font-size: 15px;
+                }
             }
 
             button {
@@ -105,11 +179,13 @@
                 font-size: 15px;
                 border-radius: 15px;
                 margin-top: 7px;
-                background:  Gray;
+                background: Gray;
                 font-weight: 500;
                 border: 1px solid gray;
                 cursor: pointer;
                 color: white;
+
+                @include mobile {}
             }
         }
     }

@@ -2,15 +2,17 @@ import "./services.scss";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
+const isMobile = window.innerWidth < 738;
+
 const variants = {
   initial: {
-    x: -500,
-    y: 100,
-    opcaity: 0,
+    x: isMobile ? 0 : -500, // ✅ mobile pe no slide
+    y: isMobile ? 0 : 100,
+    opacity: 0,
   },
   animate: {
     x: 0,
-    opcaity: 1,
+    opacity: 1,
     y: 0,
     transition: {
       duration: 1,
@@ -78,9 +80,9 @@ function Services() {
         >
           <h2>Brand Strategy</h2>
           <p>
-            We help shape your brand’s vision and positioning, understanding
-            your market deeply and defining a clear direction that supports
-            long-term growth and differentiation.
+            {isMobile
+              ? "Vision & Direction"
+              : "We help shape your brand’s vision and positioning, understanding your market deeply and defining a clear direction that supports long-term growth and differentiation."}
           </p>
           <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE
@@ -92,10 +94,11 @@ function Services() {
         >
           <h2>Visual Identity</h2>
           <p>
-            We design logos, color palettes, and visual elements that work
-            together seamlessly, giving your brand a consistent, professional
-            look that people remember.
+            {isMobile
+              ? "Design & Look"
+              : "We design logos, color palettes, and visual elements that work together seamlessly, giving your brand a consistent, professional look that people remember."}
           </p>
+
           <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE
           </motion.button>
@@ -106,9 +109,9 @@ function Services() {
         >
           <h2>Brand Marketing</h2>
           <p>
-            We craft meaningful messaging that explains who you are, what you
-            offer, and why it matters, helping your brand connect naturally with
-            the right audience.
+            {isMobile
+              ? "Growth & Reach"
+              : "We craft meaningful messaging that explains who you are, what you offer, and why it matters, helping your brand connect naturally with the right audience."}
           </p>
           <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE
@@ -120,9 +123,9 @@ function Services() {
         >
           <h2>Digital Branding</h2>
           <p>
-            We bring your brand to life across websites, social platforms, and
-            digital channels, ensuring a unified experience that builds trust
-            and strengthens recognition.
+            {isMobile
+              ? "Online Presence"
+              : "We bring your brand to life across websites, social platforms, and digital channels, ensuring a unified experience that builds trust and strengthens recognition."}
           </p>
           <motion.button whileTap={{ background: "darkgray", color: "black" }}>
             READ MORE

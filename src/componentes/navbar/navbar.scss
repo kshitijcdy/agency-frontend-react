@@ -1,3 +1,6 @@
+@import "../../app.scss";
+
+
 .navbar {
     height: 100px;
     // background-color: green;
@@ -11,10 +14,20 @@
         height: 100%;
         // background-color: red;
 
+        @include mobile {
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
 
         span {
             font-weight: bold;
             font-size: 40px;
+
+
+            @include mobile {
+                display: none;
+            }
         }
 
         .social {
@@ -23,7 +36,7 @@
             // background-color: red;
 
             img {
-                width:40px;
+                width: 40px;
             }
         }
     }

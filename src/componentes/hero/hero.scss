@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .hero {
     height: calc(100vh - 100px);
     background: linear-gradient(180deg, #0c0c1d, #111132);
@@ -19,15 +21,33 @@
             justify-content: center;
             gap: 40px;
 
+            @include mobile {
+                width: 100%;
+                height: 50%;
+                gap: 20px;
+                align-items: center;
+                text-align: center;
+
+            }
+
 
             h2 {
                 font-size: 40px;
                 color: rebeccapurple;
                 letter-spacing: 10px;
+
+                @include mobile {
+                    font-size: 22px;
+
+                }
             }
 
             h1 {
                 font-size: 88px;
+
+                @include mobile {
+                    font-size: 36px;
+                }
             }
 
             .buttons {
@@ -37,16 +57,24 @@
                     border-radius: 15px;
                     background-color: transparent;
                     color: white;
-                    margin-right: 20px;
+                    margin-inline: 20px;
                     font-weight: 400;
                     font-size: 20px;
                     cursor: pointer;
 
+
+                    @include mobile {
+                        margin-inline: 8px;
+                    }
                 }
             }
 
             img {
-                width: 60px;
+                width: 70px;
+
+                @include mobile {
+                    width: 50px;
+                }
             }
 
         }
@@ -62,28 +90,53 @@
         display: flex;
         align-items: flex-end;
 
+        @include mobile {
+            height: 50%;
+            width: 100%;
+            bottom: 0px;
+            top: unset;
+            // background-color: red;
+
+        }
+
+
         img {
-            height: 780px;
+            // height: 780px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            @include mobile {
+                height: 100%;
+                width: 100%;
+                // background-color: green;
+                object-fit: contain;
+
+            }
+
+
+
+
         }
     }
 
 
     .slidingTextContainer {
 
-        
 
 
-            position: absolute;
-            font-size: 50vh;
-            bottom: -130px;
-            white-space: nowrap;
-            color: #ffffff09;
-            font-weight: 700;
-            overflow: hidden;
-            // background-color: red;
-            margin-right: 50px;
-        
 
+        position: absolute;
+        font-size: 50vh;
+        bottom: -130px;
+        white-space: nowrap;
+        color: #ffffff09;
+        font-weight: 700;
+        overflow: hidden;
+        // background-color: red;
+        margin-right: 50px;
+
+       
 
 
     }
