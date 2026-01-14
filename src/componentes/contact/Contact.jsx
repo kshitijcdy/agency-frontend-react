@@ -2,6 +2,8 @@ import { useRef } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 
+import emailjs from "@emailjs/browser";
+
 const variants = {
   initial: {
     y: 500,
@@ -19,9 +21,27 @@ const variants = {
 
 export const Contact = () => {
   const ref = useRef();
-  const isInView = useInView(ref, { margin: "-100px" });
+  const formRef = useRef();
 
+  const isInView = useInView(ref, { margin: "-100px" });
   const isMobile = window.innerWidth < 738;
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_by720zv", "template_g5iy3nj", formRef.current, {
+        publicKey: "VwMFt8UxlTEb6_jgP",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
 
   return (
     <motion.div
@@ -81,13 +101,19 @@ export const Contact = () => {
           </svg>
         </motion.div>
         <motion.form
+          ref={formRef}
+          onSubmit={sendEmail}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" />
-          <input type="email" required placeholder="Email" />
-          <textarea rows={isMobile ? 2 : 8} placeholder="Message" />
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea
+            rows={isMobile ? 2 : 8}
+            placeholder="Message"
+            name="message"
+          />
           <button>Submit</button>
         </motion.form>
       </div>
