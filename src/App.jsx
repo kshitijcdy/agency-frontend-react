@@ -1,6 +1,6 @@
 import "./App.scss";
 import Hero from "./components/hero/Hero";
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Services from "./components/services/Services";
 import Portfolio from "./components/portfolio/Portfolio";
