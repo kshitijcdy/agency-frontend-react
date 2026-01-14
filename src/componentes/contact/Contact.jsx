@@ -20,6 +20,9 @@ const variants = {
 export const Contact = () => {
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
+
+  const isMobile = window.innerWidth < 738;
+
   return (
     <motion.div
       className="contact"
@@ -84,7 +87,7 @@ export const Contact = () => {
         >
           <input type="text" required placeholder="Name" />
           <input type="email" required placeholder="Email" />
-          <textarea type="text" rows={8} placeholder="Message" />
+          <textarea rows={isMobile ? 2 : 8} placeholder="Message" />
           <button>Submit</button>
         </motion.form>
       </div>

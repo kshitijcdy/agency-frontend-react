@@ -7,27 +7,29 @@ const items = [
     id: 1,
     title: "Crypto Exchange",
     img: "./Crypto.jpg",
-    desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi minima placeat non magnam sit, cupiditate fuga architecto corporis. Quos, consequuntur.",
+    desc: "A scalable crypto trading platform focused on security, performance, and intuitive user interactions across devices.",
   },
   {
     id: 2,
     title: "Mobile Applications",
     img: "./mobApp.png",
-    desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi minima placeat non magnam sit, cupiditate fuga architecto corporis. Quos, consequuntur.",
+    desc: "High-quality mobile applications crafted to deliver smooth performance, intuitive design, and reliable functionality across platforms.",
   },
   {
     id: 3,
     title: "ERP Tools",
     img: "./erp.png",
-    desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi minima placeat non magnam sit, cupiditate fuga architecto corporis. Quos, consequuntur.",
+    desc: "Robust ERP tools designed to centralize business processes, improve efficiency, and enhance operational visibility.",
   },
   {
     id: 4,
     title: "Brand Sites",
     img: "./dev.jpg",
-    desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi minima placeat non magnam sit, cupiditate fuga architecto corporis. Quos, consequuntur.",
+    desc: "High-impact brand websites crafted to highlight storytelling, visual appeal, and consistent brand communication.",
   },
 ];
+
+
 
 const Single = ({ item }) => {
   const ref = useRef();
@@ -37,7 +39,17 @@ const Single = ({ item }) => {
     // offset: ["end end", "start start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const isMobile = window.innerWidth < 738;
+
+
+  // const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
+  const y = useTransform(
+  scrollYProgress,
+  [0, 1],
+  isMobile ? [1,-100] : [-300, 300]
+);
+
 
   return (
     <section>

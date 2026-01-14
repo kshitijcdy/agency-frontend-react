@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@use "../../app.scss" as *;
 
 .services {
     background: linear-gradient(180deg, #0c0c1d, #111132);
@@ -19,7 +19,7 @@
             align-self: right;
             text-align: center;
             flex-direction: column;
-            padding-top:  45px;
+            padding-top: 45px;
             // background-color: red;
         }
 
@@ -42,8 +42,8 @@
 
             @include mobile {
                 width: 270px;
-                
-                
+
+
 
 
             }
@@ -160,6 +160,7 @@
 
                 @include mobile {
                     font-size: 20px;
+                    text-align: center;
                 }
             }
 
@@ -170,6 +171,7 @@
 
                 @include mobile {
                     font-size: 15px;
+                    text-align: center;
                 }
             }
 
@@ -185,7 +187,10 @@
                 cursor: pointer;
                 color: white;
 
-                @include mobile {}
+                @include mobile {
+                    display: block; // 👈 IMPORTANT
+                    margin: 10px auto 0;
+                }
             }
         }
     }
