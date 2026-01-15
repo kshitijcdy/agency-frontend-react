@@ -6,7 +6,7 @@
     // background-color: green;
 
     .wrapper {
-        max-width: 1366px;
+        max-width: 1166px;
         margin: auto;
         display: flex;
         align-items: center;
@@ -34,7 +34,7 @@
         .social {
             display: flex;
             gap: 20px;
-            // background-color: red;
+            z-index: 88;
 
             img {
                 width: 40px;

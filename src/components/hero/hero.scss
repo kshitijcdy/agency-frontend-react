@@ -32,7 +32,7 @@
 
 
             h2 {
-                font-size: 40px;
+                font-size: 35px;
                 color: rebeccapurple;
                 letter-spacing: 10px;
 
@@ -43,7 +43,7 @@
             }
 
             h1 {
-                font-size: 88px;
+                font-size: 78px;
 
                 @include mobile {
                     font-size: 36px;
@@ -52,15 +52,16 @@
 
             .buttons {
                 button {
-                    padding: 15px 20px;
-                    border: 1px solid white;
+                    padding: 10px 15px;
+                    border: 2px solid white;
                     border-radius: 15px;
                     background-color: transparent;
                     color: white;
-                    margin-inline: 20px;
+                    margin-right: 20px;
                     font-weight: 400;
                     font-size: 20px;
-                    cursor: pointer;
+                    margin-top: 15px;
+                   cursor: pointer;
 
 
                     @include mobile {
@@ -135,7 +136,7 @@
         overflow: hidden;
         // background-color: red;
         margin-right: 50px;
-
+pointer-events: none;
        
 
 

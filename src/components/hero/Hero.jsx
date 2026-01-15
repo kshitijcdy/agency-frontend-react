@@ -56,8 +56,18 @@ const Hero = () => {
               Your Idea. <br />
               Our Execution.
             </motion.h1>
-            <motion.button variants={textVariants}>Our Work</motion.button>
-            <motion.button variants={textVariants}>Hire Us</motion.button>
+            <motion.button
+              whileHover={{ borderColor: "grey", color: "grey" }}
+              variants={textVariants}
+            >
+              Our Work
+            </motion.button>
+            <motion.button
+              whileHover={{ borderColor: "grey", color: "grey" }}
+              variants={textVariants}
+            >
+              Hire Us
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}

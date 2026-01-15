@@ -58,10 +58,10 @@ function Services() {
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
+            <motion.b   whileHover={{ color: "orange" }}>For Your</motion.b>{" "}
             Business
           </h1>
-          <motion.button
+          <motion.button whileTap = {{color:"orange", borderColor:"orange"}}
             whileHover={{
               background: "transparent",
               color: "white",

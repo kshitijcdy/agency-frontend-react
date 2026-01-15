@@ -44,7 +44,7 @@
         overflow: hidden;
 
         .wrapper {
-            max-width: 1366px;
+            max-width: 1166px;
             height: 100%;
             margin: auto;
             display: flex;
@@ -62,8 +62,9 @@
             .imageContainer {
 
                 flex: 1;
-                height: 50%;
-                // background-color: red;
+                height: 40%;
+                
+                // background-color: green;
 
                 @include mobile {
                     margin-top: 150px;
@@ -99,7 +100,7 @@
 
 
                 h2 {
-                    font-size: 72px;
+                    font-size: 68px;
 
                     @include mobile {
                         font-size: 50px;
@@ -120,7 +121,8 @@
                     width: 200px;
                     padding: 10px;
 
-
+   
+                    font-size: 20px;
 
                 }
             }
